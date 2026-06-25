@@ -1,7 +1,7 @@
 # DecodeLabs- Data Analytics Internship,Task-1
 
-Projects completed during DecodeLabs Data Analytics Internship
-Data Cleaning
+* Projects completed during DecodeLabs Data Analytics Internship
+* Data Cleaning
 
 ## Project Overview
 
@@ -9,25 +9,30 @@ This project implements a complete data cleaning, validation, and quality assess
 
 The script:
 
-Loads raw data from an Excel file
-Performs structured cleaning and validation
-Fixes inconsistencies using business rules
-Logs every cleaning step
-Exports a cleaned dataset + cleaning log into a new Excel file
+* Loads raw data from an Excel file
+* Performs structured cleaning and validation
+* Fixes inconsistencies using business rules
+* Logs every cleaning step
+* Exports a cleaned dataset + cleaning log into a new Excel file
 
 ## 📂 Repository Structure
 
 ```
-├── Dataset for Data Analytics.xlsx   # Raw input dataset
-├── cleaned_dataset.xlsx              # Cleaned output with log
-├── data_cleaning.py                  # Python cleaning script
+├── Dataset for Data Analytics.xlsx
+├── cleaned_dataset.xlsx
+├── analysis.py
 ├── README.md
+└── images
+    ├── raw_dataset.png
+    ├── cleaned_dataset_img.png
+    └── cleaned_log.png
+
 ```
 
 ## 📄 Input Dataset
-File: Dataset for Data Analytics.xlsx
-Format: Excel (.xlsx)
-Status: Raw / Uncleaned
+* File: Dataset for Data Analytics.xlsx
+* Format: Excel (.xlsx)
+* Status: Raw / Uncleaned
 
 A backup copy of the raw dataset is preserved in memory for comparison.
 
@@ -37,12 +42,16 @@ A backup copy of the raw dataset is preserved in memory for comparison.
 
 The script performs an initial inspection:
 
-Sample records (head())
-Dataset shape (rows × columns)
-Column names
-Data types & null values
-Missing value counts
-Duplicate row count
+* Sample records (head())
+* Dataset shape (rows × columns)
+* Column names
+* Data types & null values
+* Missing value counts
+* Duplicate row count
+
+### Raw Dataset
+
+![Raw Dataset](raw_dataset.png)
 
 ## 2️⃣ Missing Value Handling
 Column affected: CouponCode
@@ -56,10 +65,10 @@ Missing values are replaced with:
 
 All column names are converted to snake_case for consistency:
 
-Trims whitespace
-Replaces spaces with underscores
-Splits camelCase
-Converts to lowercase
+* Trims whitespace
+* Replaces spaces with underscores
+* Splits camelCase
+* Converts to lowercase
 
 Example:
 
@@ -74,11 +83,16 @@ total_price = quantity × unit_price
 
 Steps:
 
-Recalculate expected total
-Detect mismatches
-Correct incorrect total_price values
-Remove temporary validation columns
+* Recalculate expected total
+* Detect mismatches
+* Correct incorrect total_price values
+* Remove temporary validation columns
+
 This ensures financial accuracy in the dataset.
+
+###Cleaned Dataset
+
+![Cleaned Dataset](cleaned_dataset_img.png)
 
 ## 5️⃣ Duplicate Verification
 
@@ -98,16 +112,22 @@ All cleaning steps are documented in a structured log:
 
 This log is exported as a separate Excel sheet.
 
+### Cleaned log
+
+![Cleaned_log](cleaning_log.png)
+
+
 ## 📤 Output Files
 
 ✅ cleaned_dataset.xlsx
 
 Contains two sheets:
 
-Cleaned_Data
-Fully cleaned dataset
-Validated prices
-Standardized columns
+* Cleaned_Data
+* Fully cleaned dataset
+* Validated prices
+* Standardized columns
+
 Cleaning_Log
 Step-by-step record of cleaning actions
 
@@ -137,15 +157,14 @@ After cleaning, the script verifies:
 pip install pandas openpyxl
 python analysis.py
 ```
-Ensure the input Excel file is in the same directory.
 
 ## 🎯 Use Cases
-Data analytics projects
-Academic mini / final-year projects
-Business data validation
-Financial transaction cleaning
-Data quality auditing
+* Data analytics projects
+* Academic mini / final-year projects
+* Business data validation
+* Financial transaction cleaning
+* Data quality auditing
 
 ## Author:
-Drisya M
-B.Tech CSE
+* Drisya M
+* B.Tech CSE
